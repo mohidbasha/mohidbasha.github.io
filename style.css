@@ -1,20 +1,164 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset and base styles */
+* {
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 2rem 1rem;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
 nav a {
     color: #fff;
     margin: 0 1rem;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
+
+nav a:hover {
+    color: #00d4ff;
+}
+
+/* Section layout */
 section {
-    padding: 2rem;
+    padding: 3rem 10%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+/* Project Cards */
+#projects ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+}
+
+#projects li {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#projects li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#projects h3 {
+    margin-bottom: 0.5rem;
+    color: #2c5364;
+}
+
+#projects p {
+    margin-bottom: 0.8rem;
+}
+
+#projects a {
+    color: #0077cc;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Skills list */
+#skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#skills li {
+    margin-bottom: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-left: 5px solid #2c5364;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Experience */
+#experience ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#experience li {
+    margin-bottom: 1.5rem;
+}
+
+#experience h3 {
+    color: #203a43;
+    margin-bottom: 0.3rem;
+}
+
+/* Contact Section */
+#contact a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 5%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 0.5rem;
+    }
 }
